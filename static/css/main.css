@@ -31,3 +31,16 @@ body {
 .bg-yellow {
     background: #f2e824;
 }
+
+.form-control {
+    border-radius: 500px;
+    padding: 8px 16px;
+    border: 4px solid black;
+}
+
+.btn.btn-dark {
+    border-radius: 500px;
+    background: black;
+    text-transform: uppercase;
+    font-weight: 800;
+}

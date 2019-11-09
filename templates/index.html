@@ -6,15 +6,19 @@
             {% for i, notes in courses.items() %}
                 {% for key, notes in notes.items() %}
                     <div class="col col-sm-4">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">{{ i }}</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">{{ key }}</h6>
-                    <p class="card-text">
-                        {{ notes }}
-                    </p>
-                  </div>
-                </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ i }}</h4>
+                                <h5 class="card-subtitle mb-2 text-muted" style="font-weight: 800">{{ key }}</h5>
+                                <p class="card-text">
+                                    {% autoescape false %}
+                                    {% set x = notes|replace("\n", "<br/>") %}
+                                    {{ x|truncate(50, True) }}
+                                    {% endautoescape %}
+                                </p>
+                                <a href="/view_note/{{ i }}/{{ key }}" class="btn btn-dark">Expand</a>
+                            </div>
+                        </div>
                     </div>
                 {% endfor %}
             {% endfor %}
