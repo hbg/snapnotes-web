@@ -1,0 +1,33 @@
+* {
+    font-family: -apple-system, system-ui, "SF Pro";
+    transition: 250ms ease-in-out all;
+}
+#main-content {
+    margin-top: 20px;
+}
+
+body {
+    background: #f1f5ed;
+}
+
+.card {
+    border-radius: 20px;
+    border: 4px solid black;
+    box-shadow: 2px 2px 0 4px black;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 6px 6px 0px 4px black;
+}
+
+.navbar {
+    height: 80px;
+    border-radius: 0 0 20px 20px;
+    font-size: 14pt !important;
+    font-weight: 600;
+}
+.bg-yellow {
+    background: #f2e824;
+}
