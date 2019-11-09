@@ -11,7 +11,7 @@ config = {
     }
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
-UPLOAD_FOLDER = '/uploads'
+UPLOAD_FOLDER = './static/uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -20,6 +20,19 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def permissible(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+def detect_document_uri(uri):
+    """Detects document features in the file located in Google Cloud
+    Storage."""
+    from google.cloud import vision
+    client = vision.ImageAnnotatorClient()
+    image = vision.types.Image()
+    image.source.image_uri = uri
+
+    response = client.document_text_detection(image=image)
+    if len(response.text_annotations) > 0:
+        print(response.text_annotations[0].description)
 
 
 @app.route('/')
@@ -48,7 +61,9 @@ def upload():
         print("Received data!")
         if file and permissible(file.filename):
             filename = secure_filename(file.filename)
-            file.save('/static/upload/'+filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            image_url = "http://snapnotes-cutie.herokuapp.com/static/uploads/"+filename
+            detect_document_uri(image_url)
             return redirect('/')
     return render_template("form.html")
 
