@@ -2,6 +2,7 @@
     font-family: -apple-system, system-ui, "SF Pro";
     transition: 250ms ease-in-out all;
 }
+
 #main-content {
     margin-top: 20px;
 }
@@ -28,6 +29,7 @@ body {
     font-size: 14pt !important;
     font-weight: 600;
 }
+
 .bg-yellow {
     background: #f2e824;
 }
@@ -43,4 +45,30 @@ body {
     background: black;
     text-transform: uppercase;
     font-weight: 800;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 500px;
+}
+
+.footer {
+    margin-top: 20px;
+    height: 60px;
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+#footer-content {
+    padding-top: 20px;
+    text-align: center;
 }
