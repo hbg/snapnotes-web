@@ -11,7 +11,7 @@ config = {
     }
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
-UPLOAD_FOLDER = '/uploads/'
+UPLOAD_FOLDER = '/uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -48,7 +48,7 @@ def upload():
         print("Received data!")
         if file and permissible(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            file.save('/static/upload/'+filename)
             return redirect('/')
     return render_template("form.html")
 
