@@ -22,7 +22,7 @@ def permissible(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-def detect_document_uri(uri):
+def detect_document_uri(uri, course):
     """Detects document features in the file located in Google Cloud
     Storage."""
     from google.cloud import vision
@@ -32,7 +32,10 @@ def detect_document_uri(uri):
 
     response = client.document_text_detection(image=image)
     if len(response.text_annotations) > 0:
-        print(response.text_annotations[0].description)
+        total = response.text_annotations[0].description
+        title = total.split("\n", 1)[0]
+        content = total.split("\n", 1)[1]
+        db.child("courses").child(course).child(title).set(content)
 
 
 @app.route('/')
@@ -58,13 +61,13 @@ def upload():
             "error"
             print("Invalid")
         file = request.files['file']
+        course = request.form['courseName']
         print("Received data!")
         if file and permissible(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             image_url = "http://snapnotes-cutie.herokuapp.com/static/uploads/"+filename
-            print(image_url)
-            detect_document_uri(image_url)
+            detect_document_uri(image_url, course)
             return redirect('/')
     return render_template("form.html")
 
