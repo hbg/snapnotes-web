@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4d9d8bb-a022-4a3c-a7e1-d0985b760665" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/img/android-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/android-icon-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/android-icon-36x36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/android-icon-48x48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/android-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/android-icon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-114x114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-120x120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-152x152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-180x180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-57x57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-60x60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-76x76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon-precomposed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/favicon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/ms-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/ms-icon-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/ms-icon-310x310.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/ms-icon-70x70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/partials/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
@@ -114,11 +86,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="23" />
+            <state relative-caret-position="173">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -157,9 +129,9 @@
         <option value="$PROJECT_DIR$/templates/form.html" />
         <option value="$PROJECT_DIR$/templates/view.html" />
         <option value="$PROJECT_DIR$/templates/edit.html" />
-        <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/partials/base.html" />
+        <option value="$PROJECT_DIR$/static/css/main.css" />
       </list>
     </option>
   </component>
@@ -287,12 +259,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573319040572</updated>
-      <workItem from="1573319093679" duration="22242000" />
+      <workItem from="1573319093679" duration="22678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22242000" />
+    <option name="totallyTimeSpent" value="22678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -398,13 +370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -416,6 +381,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
         </state>
       </provider>
     </entry>

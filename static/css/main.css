@@ -19,7 +19,7 @@ html {
     border-radius: 20px;
     border: 4px solid black;
     box-shadow: 2px 2px 0 4px black;
-    margin: 8px;
+    margin: 16px 8px;
     cursor: pointer;
 }
 
