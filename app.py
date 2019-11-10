@@ -5,7 +5,7 @@ import pyrebase
 from flask_wtf.csrf import CSRFProtect
 
 config = {
-        "apiKey": "AIzaSyBOYXs9OOuFDXHIx6XyOh1a7xrDpcbf6Ls",
+        "apiKey": os.environ.get("API_KEY"),
         "authDomain": "snapnotes-258517.firebaseapp.com",
         "databaseURL": "https://snapnotes-258517.firebaseio.com",
         "storageBucket": "snapnotes-258517.appspot.com",
@@ -52,6 +52,10 @@ def home():
         courses[course.key()] = (course.val())
     return render_template("index.html", courses=courses, home=True)
 
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 @app.route('/view_note/<course_name>/<class_title>')
 def view(course_name, class_title):
