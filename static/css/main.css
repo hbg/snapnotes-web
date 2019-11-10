@@ -70,6 +70,12 @@ html {
     width: 100%;
     background: black;
     color: white;
+    position: relative;
+    bottom: 0px !important
+}
+
+.content {
+    min-height: calc(100vh - 180px) !important;
 }
 
 #footer-content {
