@@ -50,7 +50,7 @@ def home():
     courses = {}
     for course in base.each():
         courses[course.key()] = (course.val())
-    return render_template("index.html", courses=courses)
+    return render_template("index.html", courses=courses, home=True)
 
 
 @app.route('/view_note/<course_name>/<class_title>')
@@ -84,7 +84,7 @@ def upload():
             image_url = "http://snapnotes-cutie.herokuapp.com/static/uploads/"+filename
             detect_document_uri(image_url, course)
             return redirect('/')
-    return render_template("form.html")
+    return render_template("form.html", home=False)
 
 
 @app.route('/uploads/<filename>')

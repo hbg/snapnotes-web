@@ -16,6 +16,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-yellow">
   <a class="navbar-brand" href="/">
     <img src="{{ url_for('static', filename='svg/logo.svg') }}" height="40" />
+      <span class="logo-text">SnapNotes</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon">
@@ -23,10 +24,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item {% if home %}active{% endif %}">
         <a class="nav-link" href="/">Home</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if not home %}active{% endif %}">
         <a class="nav-link" href="/upload">Upload</a>
       </li>
     </ul>

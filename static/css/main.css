@@ -52,6 +52,10 @@ html {
     font-weight: 800;
 }
 
+.logo-text {
+    font-weight: 800;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
