@@ -59,10 +59,14 @@ def view(course_name, class_title):
     return render_template("view.html", description=_class.val(), course_name=course_name, class_title=class_title)
 
 
-@app.route('/edit/<course_name>/<class_title>')
+@app.route('/edit/<course_name>/<class_title>', methods=['GET','POST'])
 def edit(course_name, class_title):
+    if request.method == "POST":
+        db.child("courses").child(course_name).update({class_title: request.form['newText']})
+        return redirect('/view_note/{}/{}'.format(course_name, class_title))
     _class = db.child("courses").child(course_name).child(class_title).get()
-    return render_template("view.html", description=_class.val(), course_name=course_name, class_title=class_title)
+    return render_template("edit.html", description=_class.val(), course_name=course_name, class_title=class_title)
+
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():

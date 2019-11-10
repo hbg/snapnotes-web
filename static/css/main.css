@@ -39,7 +39,7 @@ html {
 }
 
 .form-control {
-    border-radius: 500px;
+    border-radius: 20px;
     padding: 8px 16px;
     border: 4px solid black;
 }
