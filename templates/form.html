@@ -2,6 +2,7 @@
 {% block content %}
     <div class="container" id="main-content">
         <form action="/upload" method=post enctype=multipart/form-data>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
           <div class="form-group">
             <label for="courseName">Course Name</label>
             <input type="text" class="form-control" id="courseName" name="courseName" placeholder="Enter course name">

@@ -11,6 +11,10 @@ body {
     background: #f1f5ed;
 }
 
+html {
+    background: black;
+}
+
 .card {
     border-radius: 20px;
     border: 4px solid black;

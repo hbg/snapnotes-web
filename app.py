@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 from werkzeug.utils import secure_filename
 import os
 import pyrebase
+from flask_wtf.csrf import CSRFProtect
 
 config = {
         "apiKey": "AIzaSyBOYXs9OOuFDXHIx6XyOh1a7xrDpcbf6Ls",
@@ -13,7 +14,10 @@ firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 UPLOAD_FOLDER = './static/uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+SECRET_KEY = os.environ.get("SECRET_KEY", "adji31802jkasdaqwQ21")
 app = Flask(__name__)
+app.config['SECRET_KEY'] = SECRET_KEY
+csrf = CSRFProtect(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
@@ -31,10 +35,12 @@ def detect_document_uri(uri, course):
     image.source.image_uri = uri
 
     response = client.document_text_detection(image=image)
+    print(uri, response.text_annotations)
     if len(response.text_annotations) > 0:
         total = response.text_annotations[0].description
         title = total.split("\n", 1)[0]
         content = total.split("\n", 1)[1]
+        print(title, content)
         db.child("courses").child(course).child(title).set(content)
 
 
@@ -52,6 +58,11 @@ def view(course_name, class_title):
     _class = db.child("courses").child(course_name).child(class_title).get()
     return render_template("view.html", description=_class.val(), course_name=course_name, class_title=class_title)
 
+
+@app.route('/edit/<course_name>/<class_title>')
+def edit(course_name, class_title):
+    _class = db.child("courses").child(course_name).child(class_title).get()
+    return render_template("view.html", description=_class.val(), course_name=course_name, class_title=class_title)
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
