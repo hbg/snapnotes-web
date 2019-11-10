@@ -28,10 +28,11 @@ html {
 }
 
 .navbar {
-    height: 80px;
+    min-height: 80px;
     border-radius: 0 0 20px 20px;
     font-size: 14pt !important;
     font-weight: 600;
+    height: fit-content;
 }
 
 .bg-yellow {
@@ -81,4 +82,8 @@ html {
 #footer-content {
     padding-top: 20px;
     text-align: center;
+}
+
+.navbar-collapse {
+    background: #f2e824;
 }
