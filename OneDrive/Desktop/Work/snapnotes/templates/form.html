@@ -1,0 +1,17 @@
+{% extends "partials/base.html" %}
+{% block content %}
+    <div class="container" id="main-content">
+        <form action="/upload" method=post enctype=multipart/form-data>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+          <div class="form-group">
+            <label for="courseName">Course Name</label>
+            <input type="text" class="form-control" id="courseName" name="courseName" placeholder="Enter course name">
+          </div>
+          <div class="form-group">
+            <label for="file">My Note</label>
+            <input type="file" class="form-control-file" id="file" name="file">
+          </div>
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "partials/base.html" %}
+{% block content %}
+    <div class="content">
+    <div class="container" id="main-content">
+        <h1>{{ course_name }}</h1>
+        <h2 class="text-muted">{{ class_title }}</h2>
+        <p>
+            {% autoescape false %}
+            {{ description|replace("\n", "<br/>") }}
+            {% endautoescape %}
+        </p>
+        <a class="btn btn-dark" href="/edit/{{ course_name }}/{{ class_title }}">EDIT NOTE</a>
+    </div>
+    </div>
+{% endblock %}

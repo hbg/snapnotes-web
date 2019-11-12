@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>802536872169-mbsprn2kpibe7bk3g0vi9b3tpsok6ea1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.802536872169-mbsprn2kpibe7bk3g0vi9b3tpsok6ea1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCNhcNhZM6nbYHRiuAUpzVi8yOWre0HrwI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>802536872169</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>acm.SnapNotes</string>
+	<key>PROJECT_ID</key>
+	<string>snapnotes-258517</string>
+	<key>STORAGE_BUCKET</key>
+	<string>snapnotes-258517.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:802536872169:ios:6e14a75250624f3e5a3878</string>
+	<key>DATABASE_URL</key>
+	<string>https://snapnotes-258517.firebaseio.com</string>
+</dict>
+</plist>

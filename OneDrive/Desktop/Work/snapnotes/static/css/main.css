@@ -1,0 +1,93 @@
+* {
+    font-family: -apple-system, system-ui, "SF Pro";
+    transition: 250ms ease-in-out all;
+}
+
+#main-content {
+    margin-top: 20px;
+}
+
+body {
+    background: #f1f5ed;
+}
+
+html {
+    background: black;
+}
+
+.card {
+    border-radius: 20px;
+    border: 4px solid black;
+    box-shadow: 2px 2px 0 4px black;
+    margin: 16px 8px;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 6px 6px 0px 4px black;
+}
+
+.navbar {
+    min-height: 80px;
+    border-radius: 0 0 20px 20px;
+    font-size: 14pt !important;
+    font-weight: 600;
+    height: fit-content;
+}
+
+.bg-yellow {
+    background: #f2e824;
+}
+
+.form-control {
+    border-radius: 20px;
+    padding: 8px 16px;
+    border: 4px solid black;
+}
+
+.btn.btn-dark {
+    border-radius: 500px;
+    background: black;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.logo-text {
+    font-weight: 800;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 500px;
+}
+
+.footer {
+    margin-top: 20px;
+    height: 60px;
+    width: 100%;
+    background: black;
+    color: white;
+    position: relative;
+    bottom: 0px !important
+}
+
+.content {
+    min-height: calc(100vh - 180px) !important;
+}
+
+#footer-content {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.navbar-collapse {
+    background: #f2e824;
+}
