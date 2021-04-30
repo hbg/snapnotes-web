@@ -31,6 +31,6 @@ requests==2.22.0
 requests-toolbelt==0.7.0
 rsa==4.0
 six==1.13.0
-urllib3==1.25.6
+urllib3==1.25.8
 Werkzeug==0.16.0
 WTForms==2.2.1
